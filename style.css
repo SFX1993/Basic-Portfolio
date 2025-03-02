@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --primary-color: #333;
   --secondary-color: #555;
@@ -11,12 +12,14 @@
   --font-family: "Arial", sans-serif;
   --transition-speed: 0.3s;
 }
+
 body {
   font-family: var(--font-family);
   line-height: 1.6;
   color: var(--primary-color);
   background-color: var(--background-color);
 }
+
 header {
   background: var(--primary-color);
   color: #fff;
@@ -26,16 +29,60 @@ header {
   top: 0;
   z-index: 100;
 }
+
 nav ul {
   margin: 0 1rem;
   display: flex;
   list-style: none;
   justify-content: center;
-  margin: 0;
 }
+
 nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
   transition: background var(--transition-speed);
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background: var(--secondary-color);
+  border-radius: 5px;
+}
+
+main {
+  padding-top: 80px;
+}
+
+section {
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #f4f4f4;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 600px) {
+  section {
+    padding: 4rem 2rem;
+  }
+}
+
+a:focus {
+  outline: 2px dashed var(--accent-color);
+  outline-offset: 4px;
+}
+
+p {
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+button:focus {
+  outline: 2px dashed var(--accent-color);
+  outline-offset: 4px;
 }
